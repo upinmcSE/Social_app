@@ -1,0 +1,31 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /socialapp
+spring:
+  application:
+    name: social_app
+  datasource:
+    url: "jdbc:mysql://localhost:3306/social_app"
+    driverClassName: "com.mysql.cj.jdbc.Driver"
+    username: "root"
+    password: "taolathanh1"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+outbound:
+  identity:
+    client-id: "<clientId>"
+    client-secret: "<clientSecret>"
+    redirect-uri: "http://localhost:3000/authenticate"
+
+jwt:
+  signerKey: "1TjXchw5FloESb63Kc+DFhTARvpWL4jUGCwfGWxuG5SIf/1y/LgJxHnMqaF6A/ij"
+  valid-duration: 3600 # in second
+  refreshable-duration: 36000 # in seconds
+
+
+
+
